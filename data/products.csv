@@ -1,0 +1,3 @@
+product_id,type,category_id,name,brand,price,discount,stock,rating,extra1,extra2
+101,PHYSICAL,1,"CSV Physical Product","BrandA",4500.00,10.00,25,4.80,1.50,100.00
+102,DIGITAL,4,"CSV Digital Course","BrandB",1200.00,20.00,1000,4.90,"https://url.com",50.00

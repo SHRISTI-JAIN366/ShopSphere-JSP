@@ -42,7 +42,7 @@ flowchart TD
    - The user loads [student.jsp](file:///c:/Users/jains/Videos/java%20tutorial/JSP/src/main/webapp/student.jsp) and fills out the student details (`Name`, `Email`, `Course`, `Age`).
    - Clicking **Register** submits an HTTP `POST` request to the servlet url `/hello`.
 
-2. **Step 2: Controller Processing ([`HelloServlet.java`](file:///c:/Users/jains/Videos/java%20tutorial/JSP/src/main/java/com/servlet/HelloServlet.java))**
+2. **Step 2: Controller Processing ([HelloServlet.java](file:///c:/Users/jains/Videos/java%20tutorial/JSP/src/main/java/com/servlet/HelloServlet.java))**
    - The Tomcat container maps `/hello` to `com.servlet.HelloServlet`.
    - `request.getParameter("name")`, `request.getParameter("email")`, `request.getParameter("course")`, `request.getParameter("age")` extract the form inputs.
    - Values are stored into request attributes:
@@ -51,7 +51,7 @@ flowchart TD
      - `request.setAttribute("course", course)`
      - `request.setAttribute("age", ageStr)`
 
-3. **Step 3: Internal Server Forwarding & JSP Execution ([`result.jsp`](file:///c:/Users/jains/Videos/java%20tutorial/JSP/src/main/webapp/result.jsp))**
+3. **Step 3: Internal Server Forwarding & JSP Execution ([result.jsp](file:///c:/Users/jains/Videos/java%20tutorial/JSP/src/main/webapp/result.jsp))**
    - `request.getRequestDispatcher("/result.jsp").forward(request, response)` transfers execution to the JSP view internally on the server (preserving request attributes and keeping the URL intact).
    - Tomcat's JSP engine evaluates Expression Language (EL) tags (`${name}`, `${email}`, `${course}`, `${age}`) and renders dynamic HTML.
 
